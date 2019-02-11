@@ -36,11 +36,11 @@ class VerticalLinearStepper extends React.Component {
       };
   }
 
-      function getSteps() {
+       getSteps = () => {
   return ["Select campaign settings", "Create an ad group", "Create an ad"];
 }
 
-function getStepContent(step) {
+getStepContent = (step) => {
   switch (step) {
     case 0:
       return (<input type="text" value = {this.state.username || ''} />);
