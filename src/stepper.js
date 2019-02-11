@@ -38,9 +38,9 @@ function getStepContent(step) {
     case 1:
       return (<input type="text" />);
     case 2:
-      return 'This is the bit I really care about!';
-    default:
       return (<button>Invio</button>);
+    default:
+      return ('invalid option');
   }
 }
 
