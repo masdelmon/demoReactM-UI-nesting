@@ -73,10 +73,7 @@ class VerticalLinearStepper extends React.Component {
     return (
       <div className={classes.root}>
         
-            <div className = "container">
-                <div className = "row">
-                    <div className = "col-6 mr-auto ml-auto">
-                       <form onSubmit={this.onSubmit.bind(this)}>
+                       <form>
                          
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => (
@@ -118,9 +115,7 @@ class VerticalLinearStepper extends React.Component {
             </Button>
           </Paper>
         )}
-            </div>
-              </div>
-         </div>
+     
      </div>
  
     );
