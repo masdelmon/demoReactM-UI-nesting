@@ -32,20 +32,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return '
-                            <div className = "form-group">
-                             <input 
-                                 type="text"
-                                 className = "form-control"
-                                 placeholder="username" />
-                             </div>
-                          <div className = "form-group">
-                             <input 
-                                type="password"
-                                className = "form-control"
-                                placeholder="password" />
-                          </div>
-             ';
+      return '<div className = \"form-group\"><input type=\"text\" className = \"form-control\" placeholder=\"username\" /></div>';
     case 1:
       return "An ad group contains one or more ads which target a shared set of keywords.";
     case 2:
