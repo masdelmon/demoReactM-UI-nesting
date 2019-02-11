@@ -54,7 +54,7 @@ class FullWidthTabs extends React.Component {
             variant="fullWidth"
           >
             <Tab label="Item One" />
-
+               <VerticalLinearStepper />
             <Tab label="Item Two" />
             <Tab label="Item Three" />
           </Tabs>
