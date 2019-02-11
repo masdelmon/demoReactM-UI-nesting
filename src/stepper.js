@@ -32,7 +32,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `
+      return (
                             <div className = "form-group">
                              <input 
                                  type="text"
@@ -49,18 +49,18 @@ function getStepContent(step) {
                                 value = {this.state.password}
                                 onChange = {this.changePassword.bind(this)}/>
                           </div>
-             `;
+             );
     case 1:
       return "An ad group contains one or more ads which target a shared set of keywords.";
     case 2:
-      return `
-                 <button 
+      return (
+                          <button
                               type="submit"
-                              className = "btn btn-primary pull-right"
-                              onClick={this.login.bind(this)}>
+                              className = ""
+                              onClick=>
                               Invio
                           </button>
-             `;
+             );
     default:
       return "Unknown step";
   }
