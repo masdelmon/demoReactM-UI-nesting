@@ -28,9 +28,9 @@ const styles = theme => ({
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return (<input type="text" placeholder="username">);
+      return (<input type="text" placeholder="username"/>);
     case 1:
-      return (<input type="password" placeholder="password">);
+      return (<input type="password" placeholder="password"/>);
     case 2:
       return 'This is the bit I really care about!';
     default:
