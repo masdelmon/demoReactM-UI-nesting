@@ -38,7 +38,7 @@ function getStepContent(step) {
                                  type="text"
                                  className = "form-control"
                                  placeholder="username"
-                                 value = "v"
+                               
                                 />
                           </div>
                           <div className = "form-group">
@@ -46,7 +46,7 @@ function getStepContent(step) {
                                 type="password"
                                 className = "form-control"
                                 placeholder="password"
-                                value = ""
+                             
                               />
                           </div>
              );
