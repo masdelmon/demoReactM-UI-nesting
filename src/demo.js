@@ -54,8 +54,9 @@ class FullWidthTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
           >
-            <Tab label="Item One" />
+            <Tab label="Item One" >
                <VerticalLinearStepper />
+            </Tab>
             <Tab label="Item Two" />
             <Tab label="Item Three" />
           </Tabs>
