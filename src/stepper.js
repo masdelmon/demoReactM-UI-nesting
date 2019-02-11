@@ -36,22 +36,7 @@ class VerticalLinearStepper extends React.Component {
       };
   }
 
-       getSteps = () => {
-  return (["Select campaign settings", "Create an ad group", "Create an ad"]);
-}
-
-getStepContent = (step) => {
-  switch (step) {
-    case 0:
-      return (<input type="text"  />);
-    case 1:
-      return ("An ad group contains one or more ads which target a shared set of keywords.");
-    case 2:
-      return (<button>Invio</button>);
-    default:
-      return ("Unknown step");
-  }
-}
+       
       
   handleNext = () => {
     this.setState(state => ({
