@@ -38,16 +38,16 @@ function getStepContent(step) {
                                  type="text"
                                  className = "form-control"
                                  placeholder="username"
-                                 value = {this.state.username || ''}
-                                 onChange = {}/>
+                                 value = "v"
+                                />
                           </div>
                           <div className = "form-group">
                              <input 
                                 type="password"
                                 className = "form-control"
                                 placeholder="password"
-                                value = {this.state.password || ''}
-                                onChange = {}/>
+                                value = ""
+                              />
                           </div>
              );
     case 1:
