@@ -32,16 +32,35 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`;
+      return `
+                            <div className = "form-group">
+                             <input 
+                                 type="text"
+                                 className = "form-control"
+                                 placeholder="username"
+                                 value = {this.state.username || ''}
+                                 onChange = {this.changeUsername.bind(this)}/>
+                          </div>
+                          <div className = "form-group">
+                             <input 
+                                type="password"
+                                className = "form-control"
+                                placeholder="password"
+                                value = {this.state.password}
+                                onChange = {this.changePassword.bind(this)}/>
+                          </div>
+             `;
     case 1:
       return "An ad group contains one or more ads which target a shared set of keywords.";
     case 2:
-      return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
+      return `
+                 <button 
+                              type="submit"
+                              className = "btn btn-primary pull-right"
+                              onClick={this.login.bind(this)}>
+                              Invio
+                          </button>
+             `;
     default:
       return "Unknown step";
   }
@@ -77,6 +96,12 @@ class VerticalLinearStepper extends React.Component {
 
     return (
       <div className={classes.root}>
+        <div style={{marginTop:"100px", minHeight:"70vh"}}>
+            <div className = "container">
+                <div className = "row">
+                    <div className = "col-6 mr-auto ml-auto">
+                       <form onSubmit={this.onSubmit.bind(this)}>
+                         
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => (
             <Step key={label}>
@@ -106,6 +131,12 @@ class VerticalLinearStepper extends React.Component {
             </Step>
           ))}
         </Stepper>
+         </form>
+                   </div>
+              </div>
+         </div>
+     </div>
+
         {activeStep === steps.length && (
           <Paper square elevation={0} className={classes.resetContainer}>
             <Typography>All steps completed - you&apos;re finished</Typography>
