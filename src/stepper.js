@@ -38,16 +38,16 @@ function getStepContent(step) {
                                  type="text"
                                  className = "form-control"
                                  placeholder="username"
-                                 value = {this.state.username || ''}
-                                 onChange = {this.changeUsername.bind(this)}/>
+                                 value = {''}
+                                 onChange = {}/>
                           </div>
                           <div className = "form-group">
                              <input 
                                 type="password"
                                 className = "form-control"
                                 placeholder="password"
-                                value = {this.state.password}
-                                onChange = {this.changePassword.bind(this)}/>
+                                value = {''}
+                                onChange = {}/>
                           </div>
              );
     case 1:
@@ -57,7 +57,7 @@ function getStepContent(step) {
                           <button
                               type="submit"
                               className = ""
-                              onClick=>
+                              onClick= {}>
                               Invio
                           </button>
              );
@@ -132,10 +132,7 @@ class VerticalLinearStepper extends React.Component {
           ))}
         </Stepper>
          </form>
-                   </div>
-              </div>
-         </div>
-     </div>
+                
 
         {activeStep === steps.length && (
           <Paper square elevation={0} className={classes.resetContainer}>
@@ -145,6 +142,10 @@ class VerticalLinearStepper extends React.Component {
             </Button>
           </Paper>
         )}
+            </div>
+              </div>
+         </div>
+     </div>
       </div>
     );
   }
