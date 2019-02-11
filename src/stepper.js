@@ -37,17 +37,13 @@ function getStepContent(step) {
                              <input 
                                  type="text"
                                  className = "form-control"
-                                 placeholder="username"
-                               
-                                />
-                          </div>
+                                 placeholder="username" />
+                             </div>
                           <div className = "form-group">
                              <input 
                                 type="password"
                                 className = "form-control"
-                                placeholder="password"
-                             
-                              />
+                                placeholder="password" />
                           </div>
              );
     case 1:
