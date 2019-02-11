@@ -72,7 +72,7 @@ class VerticalLinearStepper extends React.Component {
 
     return (
       <div className={classes.root}>
-        <div style={{marginTop:"100px", minHeight:"70vh"}}>
+        
             <div className = "container">
                 <div className = "row">
                     <div className = "col-6 mr-auto ml-auto">
@@ -122,7 +122,7 @@ class VerticalLinearStepper extends React.Component {
               </div>
          </div>
      </div>
-      </div>
+ 
     );
   }
 }
