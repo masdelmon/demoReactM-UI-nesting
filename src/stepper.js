@@ -50,7 +50,7 @@ class VerticalLinearStepper extends React.Component {
          password: '',
          activeStep:0
       };
-  
+  }
 
   handleNext = () => {
     this.setState(state => ({
