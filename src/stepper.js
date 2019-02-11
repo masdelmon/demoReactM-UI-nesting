@@ -46,7 +46,7 @@ class VerticalLinearStepper extends React.Component {
   getStepContent(step) {
   switch (step) {
     case 0:
-      return (<input type="text" value={this. />);
+      return (<input type="text" />);
     case 1:
       return (<input type="text" />);
     case 2:
