@@ -43,7 +43,7 @@ class VerticalLinearStepper extends React.Component {
 getStepContent = (step) => {
   switch (step) {
     case 0:
-      return (<input type="text" value = {this.state.username || ''} />);
+      return (<input type="text" value />);
     case 1:
       return "An ad group contains one or more ads which target a shared set of keywords.";
     case 2:
