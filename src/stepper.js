@@ -25,7 +25,18 @@ const styles = theme => ({
   }
 });
 
-function getSteps() {
+
+class VerticalLinearStepper extends React.Component {
+  constructor(props){
+      super(props);
+      this.state = {
+         username: '',
+         password: '',
+         activeStep:0
+      };
+  }
+
+      function getSteps() {
   return ["Select campaign settings", "Create an ad group", "Create an ad"];
 }
 
@@ -41,17 +52,7 @@ function getStepContent(step) {
       return "Unknown step";
   }
 }
-
-class VerticalLinearStepper extends React.Component {
-  constructor(props){
-      super(props);
-      this.state = {
-         username: '',
-         password: '',
-         activeStep:0
-      };
-  }
-
+      
   handleNext = () => {
     this.setState(state => ({
       activeStep: state.activeStep + 1
