@@ -25,12 +25,18 @@ const styles = theme => ({
   }
 });
 
+
+function getSteps() {
+  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+}
+
+
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return (<input type="text" placeholder="username"/>);
+      return (<input type="text" />);
     case 1:
-      return (<input type="password" placeholder="password"/>);
+      return (<input type="text" />);
     case 2:
       return 'This is the bit I really care about!';
     default:
