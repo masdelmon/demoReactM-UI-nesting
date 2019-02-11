@@ -32,11 +32,11 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return '<input/>';
+      return 'input';
     case 1:
       return "An ad group contains one or more ads which target a shared set of keywords.";
     case 2:
-      return '<button>Invio</button>';
+      return 'button Invio button';
     default:
       return "Unknown step";
   }
