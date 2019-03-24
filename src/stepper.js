@@ -80,7 +80,7 @@ class VerticalLinearStepper extends React.Component {
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
               <StepContent>
-                {getStepContent(index)}</Typography>
+                {getStepContent(index)}
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
