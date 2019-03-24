@@ -31,11 +31,11 @@ function getSteps() {
 
 
 
-function getStepContent(step, username) {
+function getStepContent(step, username, updateState) {
   switch (step) {
     case 0:
      // return (<input type="text" value={data.username} />);
-        return(<input type = "text" value = {username} onChange = {this.updateState} />);
+        return(<input type = "text" value = {username} onChange = {updateState} />);
     case 1:
       return (<input type="text" />);
     case 2:
@@ -95,7 +95,7 @@ class VerticalLinearStepper extends React.Component {
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
               <StepContent>
-                {getStepContent(index, this.state.username)}
+                {getStepContent(index, this.state.username, this.updateState)}
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
