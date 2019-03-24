@@ -33,9 +33,9 @@ function getSteps() {
 getStepContent(step) {
   switch (step) {
     case 0:
-      return (<input type="text" />);
+      return (<input/>);
     case 1:
-      return (<input type="text" />);
+      return (<input/>);
     case 2:
       return (<button>Invio</button>);
     default:
