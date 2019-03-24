@@ -35,7 +35,8 @@ function getStepContent(step, username, updateState) {
   switch (step) {
     case 0:
      // return (<input type="text" value={data.username} />);
-        return(<input type = "text" value = {username} onChange = {updateState} />);
+     //   return(<input type = "text" value = {username} onChange = {updateState} />);
+     return( <label htmlFor="username">Enter username</label> <input id="username" name="username"  type="text" value = {username} onChange = {updateState} />);
     case 1:
       return (<input type="text" />);
     case 2:
@@ -55,9 +56,21 @@ class VerticalLinearStepper extends React.Component {
   };
 
   this.updateState = this.updateState.bind(this);
+  this.handleSubmit = this.handleSubmit.bind(this);
   };
+  
   updateState(e) {
       this.setState({username: e.target.value});
+  }
+  
+  handleSubmit(event) {
+    event.preventDefault();
+    const data = new FormData(event.target);
+    
+    fetch('/api/form-submit-url', {
+      method: 'POST',
+      body: data,
+    });
   }
 
   handleNext = () => {
@@ -88,7 +101,7 @@ class VerticalLinearStepper extends React.Component {
     return (
       <div className={classes.root}>
         
-                       <form>
+                       <form onSubmit={this.handleSubmit}>
                          
         <Stepper activeStep={activeStep} orientation="vertical">
           {steps.map((label, index) => (
