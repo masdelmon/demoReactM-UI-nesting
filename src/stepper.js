@@ -29,16 +29,18 @@ function getSteps() {
   return ["Select campaign settings", "Create an ad group", "Create an ad"];
 }
 
+
+
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return '<input/>';
+      return (<input type="text" value="{this.state.username} ''}" />);
     case 1:
-      return "An ad group contains one or more ads which target a shared set of keywords.";
+      return (<input type="text" />);
     case 2:
-      return 'button Invio button';
+      return (<button>Invio</button>);
     default:
-      return "Unknown step";
+      return ('invalid option');
   }
 }
 
