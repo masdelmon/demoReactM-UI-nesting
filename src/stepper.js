@@ -33,11 +33,11 @@ function getSteps() {
 getStepContent(step) {
   switch (step) {
     case 0:
-      return (<input/>);
+      return ('<input/>');
     case 1:
-      return (<input/>);
+      return ('<input/>');
     case 2:
-      return (<button>Invio</button>);
+      return ('<button>Invio</button>');
     default:
       return ('invalid option');
   }
