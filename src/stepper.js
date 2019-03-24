@@ -73,7 +73,7 @@ class VerticalLinearStepper extends React.Component {
     const { classes } = this.props;
     const steps = getSteps();
     const { activeStep } = this.state;
-    const { valuestep1 } = this.state;
+    const { username } = this.state;
 
     return (
       <div className={classes.root}>
@@ -85,7 +85,7 @@ class VerticalLinearStepper extends React.Component {
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
               <StepContent>
-                {getStepContent(index, valuestep1)}
+                {getStepContent(index, username)}
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
