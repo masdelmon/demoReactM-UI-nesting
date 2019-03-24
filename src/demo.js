@@ -69,7 +69,7 @@ class FullWidthTabs extends React.Component {
         >
           <TabContainer dir={theme.direction}></TabContainer>
           <TabContainer dir={theme.direction}></TabContainer>
-          <TabContainer dir={theme.direction}><VerticalLinearStepper </TabContainer>
+          <TabContainer dir={theme.direction}></TabContainer>
         </SwipeableViews>
       </div>
     );
