@@ -48,7 +48,7 @@ function getStepContent(step, data) {
 class VerticalLinearStepper extends React.Component {
   constructor(props) {
       super(props);
-  state = {
+  this.state = {
     activeStep: 0,
     username: 'max',
     password: ''
