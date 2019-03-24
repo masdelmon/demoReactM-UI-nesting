@@ -67,7 +67,7 @@ class FullWidthTabs extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}></TabContainer>
+          <TabContainer dir={theme.direction}><VerticalLinearStepper/></TabContainer>
           <TabContainer dir={theme.direction}></TabContainer>
           <TabContainer dir={theme.direction}></TabContainer>
         </SwipeableViews>
