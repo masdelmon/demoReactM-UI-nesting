@@ -55,9 +55,9 @@ class FullWidthTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
           >
-            <Tab label="Item One">
-                <VerticalLinearStepper />
-             </Tab>
+            <Tab label="Item One"/>
+                
+             
             <Tab label="Item Two" />
             <Tab label="Item Three" />
           </Tabs>
@@ -67,7 +67,7 @@ class FullWidthTabs extends React.Component {
           index={this.state.value}
           onChangeIndex={this.handleChangeIndex}
         >
-          <TabContainer dir={theme.direction}><Login/></TabContainer>
+          <TabContainer dir={theme.direction}></TabContainer>
           <TabContainer dir={theme.direction}><VerticalLinearStepper /></TabContainer>
           <TabContainer dir={theme.direction}><VerticalLinearStepper /></TabContainer>
         </SwipeableViews>
