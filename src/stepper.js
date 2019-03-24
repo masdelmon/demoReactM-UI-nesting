@@ -31,10 +31,10 @@ function getSteps() {
 
 
 
-function getStepContent(step) {
+function getStepContent(step,valuestep1) {
   switch (step) {
     case 0:
-      return (<input type="text" value="prova" />);
+      return (<input type="text" value=valuestep1 />);
     case 1:
       return (<input type="text" />);
     case 2:
@@ -73,6 +73,7 @@ class VerticalLinearStepper extends React.Component {
     const { classes } = this.props;
     const steps = getSteps();
     const { activeStep } = this.state;
+    const { valuestep1 } = this.state;
 
     return (
       <div className={classes.root}>
@@ -84,7 +85,7 @@ class VerticalLinearStepper extends React.Component {
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
               <StepContent>
-                {getStepContent(index)}
+                {getStepContent(index, valuestep1)}
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
