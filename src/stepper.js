@@ -34,7 +34,7 @@ function getSteps() {
 function getStepContent(step) {
   switch (step) {
     case 0:
-      return (<input type="text" value="{this.state.username}" />);
+      return (<input type="text" value="prova" />);
     case 1:
       return (<input type="text" />);
     case 2:
