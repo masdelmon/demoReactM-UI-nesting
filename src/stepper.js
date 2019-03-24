@@ -30,7 +30,18 @@ function getSteps() {
   return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
 }
 
-
+getStepContent(step) {
+  switch (step) {
+    case 0:
+      return (<input type="text" />);
+    case 1:
+      return (<input type="text" />);
+    case 2:
+      return (<button>Invio</button>);
+    default:
+      return ('invalid option');
+  }
+}
 
 
 class VerticalLinearStepper extends React.Component {
@@ -43,19 +54,6 @@ class VerticalLinearStepper extends React.Component {
       };
   }
 
-  getStepContent(step) {
-  switch (step) {
-    case 0:
-      return (<input type="text" />);
-    case 1:
-      return (<input type="text" />);
-    case 2:
-      return (<button>Invio</button>);
-    default:
-      return ('invalid option');
-  }
-}
-       
       
   handleNext = () => {
     this.setState(state => ({
