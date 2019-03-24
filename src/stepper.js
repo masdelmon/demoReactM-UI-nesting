@@ -28,7 +28,7 @@ const styles = theme => ({
 
 function getSteps() {
   return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
-}
+};
 
 getStepContent(step) {
   switch (step) {
@@ -41,7 +41,7 @@ getStepContent(step) {
     default:
       return ('invalid option');
   }
-}
+};
 
 
 class VerticalLinearStepper extends React.Component {
