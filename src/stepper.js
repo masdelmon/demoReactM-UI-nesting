@@ -34,7 +34,7 @@ function getSteps() {
 function getStepContent(step,valuestep1) {
   switch (step) {
     case 0:
-      return (<input type="text" value=valuestep1 />);
+      return (<input type="text" value={valuestep1} />);
     case 1:
       return (<input type="text" />);
     case 2:
