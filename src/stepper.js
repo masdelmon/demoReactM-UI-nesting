@@ -152,7 +152,7 @@ class VerticalLinearStepper extends React.Component {
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
               <StepContent>
-                {getStepContent(index, this.state, this.updateState)}
+                {getStepContent(index, this.state, this.updateStateUsername, this.updateStatePassword, this.updateStateFirstName, this.updateStateLastName, this.updateStateEmail, this.updateStatePhone)}
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
