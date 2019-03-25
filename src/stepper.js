@@ -36,7 +36,7 @@ function getStepContent(step, username, updateState) {
     case 0:
      // return (<input type="text" value={data.username} />);
      //   return(<input type = "text" value = {username} onChange = {updateState} />);
-     return( <label htmlFor="username">Enter username</label> <input id="username" name="username"  type="text" value = {username} onChange = {updateState} />);
+     return( <input id="username" name="username"  type="text" value = {username} onChange = {updateState} />);
     case 1:
       return (<input type="text" />);
     case 2:
