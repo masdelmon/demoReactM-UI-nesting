@@ -111,7 +111,7 @@ class VerticalLinearStepper extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
     
-    fetch('https://petstore.swagger.io/v2/user/masdelmon', {
+    fetch('https://petstore.swagger.io/v2/user', {
       method: 'POST',
       body: data,
     });
