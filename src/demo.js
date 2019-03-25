@@ -55,11 +55,11 @@ class FullWidthTabs extends React.Component {
             textColor="primary"
             variant="fullWidth"
           >
-            <Tab label="Item One"/>
+            <Tab label="User"/>
                 
              
-            <Tab label="Item Two" />
-            <Tab label="Item Three" />
+            <Tab label="Pet" />
+            <Tab label="Order" />
           </Tabs>
         </AppBar>
         <SwipeableViews
