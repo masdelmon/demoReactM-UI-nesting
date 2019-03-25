@@ -26,7 +26,7 @@ const styles = theme => ({
 });
 
 function getSteps() {
-  return ["Select campaign settings", "Create an ad group", "Create an ad"];
+  return ["Select username", "password", "first name", "last name", "email", "phone"];
 }
 
 
