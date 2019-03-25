@@ -34,9 +34,10 @@ function getSteps() {
 function getStepContent(step, username, updateState) {
   switch (step) {
     case 0:
+      fields_step_0 =  '<input id="username" name="username"  type="text" value = {username} onChange = {updateState} /><input type="text" />';
      // return (<input type="text" value={data.username} />);
      //   return(<input type = "text" value = {username} onChange = {updateState} />);
-     return( <input id="username" name="username"  type="text" value = {username} onChange = {updateState} /><input type="text" />);
+     return(fields_step_0);
     case 1:
       return (<input type="text" />);
     case 2:
