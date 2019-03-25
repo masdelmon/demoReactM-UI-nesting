@@ -31,16 +31,22 @@ function getSteps() {
 
 
 
-function getStepContent(step, username, updateState) {
+function getStepContent(step, datafrm, updateState) {
   switch (step) {
     case 0:
      // return (<input type="text" value={data.username} />);
      //   return(<input type = "text" value = {username} onChange = {updateState} />);
-     return(<input id="username" name="username"  type="text" value = {username} onChange = {updateState} />);
+     return(<input id="username" name="username"  type="text" value = {datafrm.username} onChange = {updateState} />);
     case 1:
-      return (<input type="text" />);
+      return(<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateState} />);
     case 2:
-      return (<button>Invio</button>);
+      return(<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateState} />);
+    case 3:
+      return(<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateState} />);
+    case 4:
+      return(<input id="email" name="email"  type="text" value = {datafrm.mail} onChange = {updateState} />);
+    case 5:
+      return(<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateState} />);
     default:
       return ('invalid option');
   }
@@ -48,11 +54,18 @@ function getStepContent(step, username, updateState) {
 
 class VerticalLinearStepper extends React.Component {
   constructor(props) {
-      super(props);
-  this.state = {
+    super(props);
+    
+    this.state = {
     activeStep: 0,
-    username: 'max',
-    password: ''
+    id: 0,
+    username: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    phone: '',
+    userStatus: 0
   };
 
   this.updateState = this.updateState.bind(this);
@@ -61,6 +74,11 @@ class VerticalLinearStepper extends React.Component {
   
   updateState(e) {
       this.setState({username: e.target.value});
+      this.setState({password: e.target.value});
+      this.setState({firstName: e.target.value});
+      this.setState({lastName: e.target.value});
+      this.setState({email: e.target.value});
+      this.setState({phone: e.target.value});
   }
   
   handleSubmit(event) {
@@ -108,7 +126,7 @@ class VerticalLinearStepper extends React.Component {
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
               <StepContent>
-                {getStepContent(index, this.state.username, this.updateState)}
+                {getStepContent(index, this.state, this.updateState)}
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
