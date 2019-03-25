@@ -36,7 +36,7 @@ function getStepContent(step, username, updateState) {
     case 0:
      // return (<input type="text" value={data.username} />);
      //   return(<input type = "text" value = {username} onChange = {updateState} />);
-     return( <input id="username" name="username"  type="text" value = {username} onChange = {updateState} />);
+     return( <input id="username" name="username"  type="text" value = {username} onChange = {updateState} /><input type="text" />);
     case 1:
       return (<input type="text" />);
     case 2:
@@ -67,7 +67,7 @@ class VerticalLinearStepper extends React.Component {
     event.preventDefault();
     const data = new FormData(event.target);
     
-    fetch('/api/form-submit-url', {
+    fetch('https://petstore.swagger.io/v2/user/masdelmon', {
       method: 'POST',
       body: data,
     });
