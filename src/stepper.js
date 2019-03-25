@@ -31,22 +31,22 @@ function getSteps() {
 
 
 
-function getStepContent(step, datafrm, updateState) {
+function getStepContent(step, datafrm, updateStateUsername, updateStatePassword, updateStateFirstName, updateStateLastName, updateStateEmail, updateStatePhone) {
   switch (step) {
     case 0:
      // return (<input type="text" value={data.username} />);
      //   return(<input type = "text" value = {username} onChange = {updateState} />);
-     return(<input id="username" name="username"  type="text" value = {datafrm.username} onChange = {updateState} />);
+     return(<input id="username" name="username"  type="text" value = {datafrm.username} onChange = {updateStateUsername} />);
     case 1:
-      return(<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateState} />);
+      return(<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} />);
     case 2:
-      return(<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateState} />);
+      return(<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateStateFirstName} />);
     case 3:
-      return(<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateState} />);
+      return(<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateStateLastName} />);
     case 4:
-      return(<input id="email" name="email"  type="text" value = {datafrm.mail} onChange = {updateState} />);
+      return(<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />);
     case 5:
-      return(<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateState} />);
+      return(<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} />);
     default:
       return ('invalid option');
   }
@@ -68,16 +68,42 @@ class VerticalLinearStepper extends React.Component {
     userStatus: 0
   };
 
-  this.updateState = this.updateState.bind(this);
-  this.handleSubmit = this.handleSubmit.bind(this);
+  this.updateStateUsername = this.updateStateUsername.bind(this);
+  this.updateStatePassword = this.updateStatePassword.bind(this);
+  this.updateStateFirstName = this.updateStateFirstName.bind(this);
+  this.updateStateLastName = this.updateStateLastName.bind(this);
+  this.updateStateEmail = this.updateStateEmail.bind(this);
+  this.updateStatePhone = this.updateStatePhone.bind(this);
+  
   };
   
-  updateState(e) {
+  updateStateUsername(e) {
       this.setState({username: e.target.value});
+      
+  }
+  
+  updateStatePassword(e) {
       this.setState({password: e.target.value});
+      
+  }
+  
+  updateStateFirstName(e) {
       this.setState({firstName: e.target.value});
+      
+  }
+  
+  updateStateLastName(e) {
       this.setState({lastName: e.target.value});
+      
+  }
+  
+  updateStateEmail(e) {
       this.setState({email: e.target.value});
+      
+  }
+  
+  updateStatePhone(e) {
+      
       this.setState({phone: e.target.value});
   }
   
