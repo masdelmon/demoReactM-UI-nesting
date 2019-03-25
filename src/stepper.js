@@ -36,7 +36,7 @@ function getStepContent(step, datafrm, updateStateUsername, updateStatePassword,
     case 0:
      // return (<input type="text" value={data.username} />);
      //   return(<input type = "text" value = {username} onChange = {updateState} />);
-     return(<input id="username" name="username"  type="text" value = {datafrm.username} onChange = {updateStateUsername} />);
+     return {elem1: <label>Enter username</label>,elem2: <input id="username" name="username"  type="text" value = {datafrm.username} onChange = {updateStateUsername} /> };
     case 1:
       return(<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} />);
     case 2:
