@@ -40,7 +40,7 @@ function getStepContent(step, datafrm, updateStateUsername, updateStatePassword,
     case 2: 
      return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
     case 3:
-     return <fieldset>Username:{datafrm.username} - Password:{datafrm.password}<Button onClick={handleStep(0)} className={classes.button}>Modifica</Button></fieldset>;
+     return <fieldset>Username:{datafrm.username} - Password:{datafrm.password} - <Button value="0" onClick={updateStep} className={classes.button}>Modifica</Button></fieldset>;
     default:
       return ('invalid option');
   }
@@ -68,8 +68,15 @@ class VerticalLinearStepper extends React.Component {
   this.updateStateLastName = this.updateStateLastName.bind(this);
   this.updateStateEmail = this.updateStateEmail.bind(this);
   this.updateStatePhone = this.updateStatePhone.bind(this);
+    
+  this.updateStep = this.updateStep.bind(this);
   
   };
+  
+  updateStep(e) {
+      this.setState({activeStep: e.target.value});
+      
+  }
   
   updateStateUsername(e) {
       this.setState({username: e.target.value});
