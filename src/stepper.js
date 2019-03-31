@@ -34,11 +34,11 @@ function getSteps() {
 function getStepContent(step, datafrm, updateStateUsername, updateStatePassword, updateStateFirstName, updateStateLastName, updateStateEmail, updateStatePhone, updateStep0, updateStep1, updateStep2, classes) {
   switch (step) {
     case 0:
-     return <fieldset><legend>User data:</legend>Username&nbsp;:<input id="username" name="username" type="text" value = {datafrm.username} onChange = {updateStateUsername} />Password:<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} /></fieldset>;
+     return <fieldset><legend>User data:</legend>Username&nbsp;:<input id="username" name="username" type="text" value = {datafrm.username} onChange = {updateStateUsername} />Password :<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} /></fieldset>;
      case 1:
-     return <fieldset><legend>Personal data:</legend>Name&nbsp;&nbsp;&nbsp;&nbsp;:<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateStateFirstName} />Surname&nbsp;:<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateStateLastName} /></fieldset>;
+     return <fieldset><legend>Personal data:</legend>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateStateFirstName} />Surname&nbsp;:<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateStateLastName} /></fieldset>;
     case 2: 
-     return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
+     return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
     case 3:
      return <fieldset>Username:{datafrm.username} - Password:{datafrm.password} - <Button variant="contained" color="primary" onClick={updateStep0} className={classes.button}>Modifica</Button>Name&nbsp;&nbsp;&nbsp;:{datafrm.firstName} - Surname:{datafrm.lastName} - <Button variant="contained" color="primary" onClick={updateStep1} className={classes.button}>Modifica</Button>Email:{datafrm.email} - Password:{datafrm.phone} - <Button variant="contained" color="primary" onClick={updateStep2} className={classes.button}>Modifica</Button></fieldset>;
     default:
