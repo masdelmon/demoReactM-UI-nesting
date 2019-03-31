@@ -26,7 +26,7 @@ const styles = theme => ({
 });
 
 function getSteps() {
-  return ["Select account data", "Select personal data", "Select addresses data"];
+  return ["Select account data", "Select personal data", "Select addresses data", "Sum up"];
 }
 
 
@@ -39,6 +39,8 @@ function getStepContent(step, datafrm, updateStateUsername, updateStatePassword,
      return <fieldset><legend>Personal data:</legend>Name&nbsp;&nbsp;&nbsp;&nbsp;:<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateStateFirstName} />Surname&nbsp;:<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateStateLastName} /></fieldset>;
     case 2: 
      return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
+    case 3:
+     return <fieldset>Username: {{datafrm.username}}&nbsp;&nbsp;<Button onClick={this.handleStep(0)} className={classes.button}>Modifica</Button></fieldset>;
     default:
       return ('invalid option');
   }
@@ -108,6 +110,13 @@ class VerticalLinearStepper extends React.Component {
       body: data,
     });
   }
+
+  
+  handleStep = (num) => {
+    this.setState(state => ({
+      activeStep: num
+    }));
+  };
 
   handleNext = () => {
     this.setState(state => ({
