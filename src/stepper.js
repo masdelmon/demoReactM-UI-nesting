@@ -40,7 +40,7 @@ function getStepContent(step, datafrm, updateStateUsername, updateStatePassword,
     case 2: 
      return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
     case 3:
-     return <fieldset>Username:{datafrm.username} - Password:{datafrm.password} - <Button variant="contained" color="primary" onClick={updateStep0} className={classes.button}>Modifica</Button>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{datafrm.firstName} - Surname:{datafrm.lastName} - <Button variant="contained" color="primary" onClick={updateStep1} className={classes.button}>Modifica</Button>Email:{datafrm.email} - Password:{datafrm.phone} - <Button variant="contained" color="primary" onClick={updateStep2} className={classes.button}>Modifica</Button></fieldset>;
+     return <fieldset>Username:{datafrm.username} - Password:{datafrm.password} - <Button variant="contained" color="primary" onClick={updateStep0} className={classes.button}>Modifica</Button>Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:{datafrm.firstName} - Surname:{datafrm.lastName} - <Button variant="contained" color="primary" onClick={updateStep1} className={classes.button}>Modifica</Button>Email:{datafrm.email} - Password:{datafrm.phone} - <Button variant="contained" color="primary" onClick={updateStep2} className={classes.button}>Modifica</Button></fieldset>;
     default:
       return ('invalid option');
   }
