@@ -38,7 +38,7 @@ function getStepContent(step, datafrm, updateStateUsername, updateStatePassword,
      case 1:
      return <fieldset><legend>Personal data:</legend>Name&nbsp;&nbsp;&nbsp;&nbsp;:<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateStateFirstName} />Surname&nbsp;:<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateStateLastName} /></fieldset>;
     case 2: 
-     return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
+     return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
     default:
       return ('invalid option');
   }
