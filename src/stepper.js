@@ -74,7 +74,7 @@ class VerticalLinearStepper extends React.Component {
   };
   
   updateStep(e) {
-      this.setState({activeStep: 0});
+      this.setState({activeStep: e.target.value});
       
   }
   
