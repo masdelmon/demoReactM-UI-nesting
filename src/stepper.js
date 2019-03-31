@@ -31,7 +31,7 @@ function getSteps() {
 
 
 
-function getStepContent(step, datafrm, updateStateUsername, updateStatePassword, updateStateFirstName, updateStateLastName, updateStateEmail, updateStatePhone, updateStep, classes) {
+function getStepContent(step, datafrm, updateStateUsername, updateStatePassword, updateStateFirstName, updateStateLastName, updateStateEmail, updateStatePhone, updateStep0, updateStep1, updateStep2, classes) {
   switch (step) {
     case 0:
      return <fieldset><legend>User data:</legend>Username&nbsp;:<input id="username" name="username" type="text" value = {datafrm.username} onChange = {updateStateUsername} />Password:<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} /></fieldset>;
@@ -72,7 +72,6 @@ class VerticalLinearStepper extends React.Component {
   this.updateStep0 = this.updateStep0.bind(this);
   this.updateStep1 = this.updateStep1.bind(this);
   this.updateStep2 = this.updateStep2.bind(this);
-  this.updateStep3 = this.updateStep3.bind(this);
   
   };
   
@@ -91,10 +90,7 @@ class VerticalLinearStepper extends React.Component {
       
   }
   
-  updateStep3(e) {
-      this.setState({activeStep: 3});
-      
-  }
+  
   
   updateStateUsername(e) {
       this.setState({username: e.target.value});
