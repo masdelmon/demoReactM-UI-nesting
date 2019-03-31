@@ -31,7 +31,7 @@ function getSteps() {
 
 
 
-function getStepContent(step, datafrm, updateStateUsername, updateStatePassword, updateStateFirstName, updateStateLastName, updateStateEmail, updateStatePhone) {
+function getStepContent(step, datafrm, updateStateUsername, updateStatePassword, updateStateFirstName, updateStateLastName, updateStateEmail, updateStatePhone, updateStep) {
   switch (step) {
     case 0:
      return <fieldset><legend>User data:</legend>Username&nbsp;:<input id="username" name="username" type="text" value = {datafrm.username} onChange = {updateStateUsername} />Password:<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} /></fieldset>;
