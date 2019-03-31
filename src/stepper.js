@@ -26,7 +26,7 @@ const styles = theme => ({
 });
 
 function getSteps() {
-  return ["User", "Person", "Addresses"];
+  return ["Select account data", "Select personal data", "Select addresses data"];
 }
 
 
