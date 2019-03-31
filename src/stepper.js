@@ -34,17 +34,11 @@ function getSteps() {
 function getStepContent(step, datafrm, updateStateUsername, updateStatePassword, updateStateFirstName, updateStateLastName, updateStateEmail, updateStatePhone) {
   switch (step) {
     case 0:
-     return <fieldset><legend>Person:</legend>Username:<input id="username" name="username" type="text" value = {datafrm.username} onChange = {updateStateUsername} />Password:<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} /></fieldset>;
+     return <fieldset><legend>User data:</legend>Username:<input id="username" name="username" type="text" value = {datafrm.username} onChange = {updateStateUsername} />Password:<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} /></fieldset>;
      case 1:
-      return(<input id="password" name="password"  type="text" value = {datafrm.password} onChange = {updateStatePassword} />);
-    case 2:
-      return(<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateStateFirstName} />);
-    case 3:
-      return(<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateStateLastName} />);
-    case 4:
-      return(<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />);
-    case 5:
-      return(<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} />);
+     return <fieldset><legend>Personal data:</legend>Name:<input id="firstName" name="firstName"  type="text" value = {datafrm.firstName} onChange = {updateStateFirstName} />Surname:<input id="lastName" name="lastName"  type="text" value = {datafrm.lastName} onChange = {updateStateLastName} /></fieldset>;
+    case 2: 
+     return <fieldset><legend>Address data:</legend>Name:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} /><input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
     default:
       return ('invalid option');
   }
