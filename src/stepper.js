@@ -11,7 +11,7 @@ import Typography from "@material-ui/core/Typography";
 
 const styles = theme => ({
   root: {
-    width: "100%"
+    width: "90%"
   },
   button: {
     marginTop: theme.spacing.unit,
@@ -41,7 +41,7 @@ function getStepContent(step, datafrm, updateStateUsername, updateStatePassword,
      return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
     case 3:
      //return <fieldset>Username:{datafrm.username} - Password:{datafrm.password} - <Button variant="contained" color="primary" onClick={updateStep0} className={classes.button}>Modifica</Button>Name &nbsp;&nbsp;&nbsp;&nbsp;:{datafrm.firstName} - &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Surname:{datafrm.lastName} - <Button variant="contained" color="primary" onClick={updateStep1} className={classes.button}>Modifica</Button>Email:{datafrm.email} - Password:{datafrm.phone} - <Button variant="contained" color="primary" onClick={updateStep2} className={classes.button}>Modifica</Button></fieldset>;
-       return <table><tbody><tr><td>Username:</td><td>{datafrm.username}</td><td>Password:</td><td>{datafrm.password}</td><td><Button variant="contained" color="primary" onClick={updateStep0} className={classes.button}>Modifica</Button></td></tr><tr><td>Name:</td><td>{datafrm.firstName}</td><td>Surname:</td><td>{datafrm.lastName}</td><td><Button variant="contained" color="primary" onClick={updateStep1} className={classes.button}>Modifica</Button></td></tr><tr><td>Email:</td><td>{datafrm.email}</td><td>Password:</td><td>{datafrm.phone}</td><td><Button variant="contained" color="primary" onClick={updateStep2} className={classes.button}>Modifica</Button></td></tr></tbody></table>;
+       return <table style="{width:50%}"><tbody><tr><td>Username:</td><td>{datafrm.username}</td><td>Password:</td><td>{datafrm.password}</td><td><Button variant="contained" color="primary" onClick={updateStep0} className={classes.button}>Modifica</Button></td></tr><tr><td>Name:</td><td>{datafrm.firstName}</td><td>Surname:</td><td>{datafrm.lastName}</td><td><Button variant="contained" color="primary" onClick={updateStep1} className={classes.button}>Modifica</Button></td></tr><tr><td>Email:</td><td>{datafrm.email}</td><td>Password:</td><td>{datafrm.phone}</td><td><Button variant="contained" color="primary" onClick={updateStep2} className={classes.button}>Modifica</Button></td></tr></tbody></table>;
      default:
       return ('invalid option');
   }
