@@ -40,7 +40,7 @@ function getStepContent(step, datafrm, updateStateUsername, updateStatePassword,
     case 2: 
      return <fieldset><legend>Address data:</legend>Email&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:<input id="email" name="email"  type="text" value = {datafrm.email} onChange = {updateStateEmail} />Phone&nbsp;&nbsp;&nbsp;:<input id="phone" name="phone"  type="text" value = {datafrm.phone} onChange = {updateStatePhone} /></fieldset>;
     case 3:
-     return <fieldset>Username:{datafrm.username} - Password:{datafrm.password} - <Button value={{0}} variant="contained" color="primary" onClick={updateStep} className={classes.button}>Modifica</Button>Name:{datafrm.firstName} - Surname:{datafrm.lastName} - <Button value={{1}} variant="contained" color="primary" onClick={updateStep} className={classes.button}>Modifica</Button>Email:{datafrm.email} - Password:{datafrm.phone} - <Button value={{2}} variant="contained" color="primary" onClick={updateStep} className={classes.button}>Modifica</Button></fieldset>;
+     return <fieldset>Username:{datafrm.username} - Password:{datafrm.password} - <Button value="0" variant="contained" color="primary" onClick={updateStep0} className={classes.button}>Modifica</Button>Name:{datafrm.firstName} - Surname:{datafrm.lastName} - <Button value="1" variant="contained" color="primary" onClick={updateStep1} className={classes.button}>Modifica</Button>Email:{datafrm.email} - Password:{datafrm.phone} - <Button value="2" variant="contained" color="primary" onClick={updateStep2} className={classes.button}>Modifica</Button></fieldset>;
     default:
       return ('invalid option');
   }
@@ -69,12 +69,30 @@ class VerticalLinearStepper extends React.Component {
   this.updateStateEmail = this.updateStateEmail.bind(this);
   this.updateStatePhone = this.updateStatePhone.bind(this);
     
-  this.updateStep = this.updateStep.bind(this);
+  this.updateStep0 = this.updateStep0.bind(this);
+  this.updateStep1 = this.updateStep1.bind(this);
+  this.updateStep2 = this.updateStep2.bind(this);
+  this.updateStep3 = this.updateStep3.bind(this);
   
   };
   
-  updateStep(e) {
-      this.setState({activeStep: e.target.value});
+  updateStep0(e) {
+      this.setState({activeStep: 0});
+      
+  }
+  
+  updateStep1(e) {
+      this.setState({activeStep: 1});
+      
+  }
+  
+  updateStep2(e) {
+      this.setState({activeStep: 2});
+      
+  }
+  
+  updateStep3(e) {
+      this.setState({activeStep: 3});
       
   }
   
@@ -153,7 +171,7 @@ class VerticalLinearStepper extends React.Component {
             <Step key={label}>
               <StepLabel>{label}</StepLabel>
               <StepContent>
-                {getStepContent(index, this.state, this.updateStateUsername, this.updateStatePassword, this.updateStateFirstName, this.updateStateLastName, this.updateStateEmail, this.updateStatePhone, this.updateStep, classes)}
+                {getStepContent(index, this.state, this.updateStateUsername, this.updateStatePassword, this.updateStateFirstName, this.updateStateLastName, this.updateStateEmail, this.updateStatePhone, this.updateStep0, this.updateStep1, this.updateStep2, this.updateStep3, classes)}
                 <div className={classes.actionsContainer}>
                   <div>
                     <Button
